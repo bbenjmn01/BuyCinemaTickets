@@ -17,12 +17,17 @@ public class Seats {
         seatStatus = new boolean[a][b];
     }
 
-    public void buy(int a, int b) {
-        count++;
+    public int buy(int a, int b) {
+        ++count;
+        int amount = count; 
         seatStatus[a][b] = true;
+        this.count = 0;
+        return amount;
     }
 
-    public void reset() {
-        this.count = 0;
+    public void resetSeats() {
+        for (int i = 0; i < seatStatus.length; i++) {
+            seatStatus[i][i] = false;
+        }
     }
 }
