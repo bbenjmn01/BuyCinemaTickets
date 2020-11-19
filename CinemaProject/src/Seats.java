@@ -16,10 +16,8 @@ public class Seats {
     public static int count = 0;
     public static int amounts = 0;
 
-
-
-    public Seats(int a, int b) {
-        seatStatus = new boolean[a][b];
+    public Seats() {
+        seatStatus = new boolean[10][15];
     }
 
     public int buy(int a, int b) {

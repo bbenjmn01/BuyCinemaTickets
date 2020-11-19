@@ -11,22 +11,41 @@
 public final class Movie {
     
     private String[] movieName;
+    private String[] Time;
+    private int[] Round;
     private int amount;
+    public static int round;
     
-    public Movie(int a){
+   public Movie(int a){
+        Round = new int[a];
+        movieName = new String[a];
+        Time = new String[a];
+        this.round=a;
+    }
+   
+    public void creatMovie(String name,String time){
+        Round[this.amount]=amount+1;
+        insertMovieName(name);
+        insertTime(time);
+        Seats s = new Seats();
+        amount++;
         
     }
-    
-    public Movie(String name){
-        insertMovieName(name);
-    }
-    
-    public void createMovieAmount(int a){
-        movieName = new String[a];
-    } 
-    
+  
     public void insertMovieName(String name){
         movieName[this.amount] = name;
     }
-            
+    
+    public void insertTime(String time){
+        Time[this.amount] = time;
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < round; i++) {
+            result += Round[i] + " " + movieName[i] + " " + Time[i] +"\n";
+        }
+        return result;
+    }  
 }
