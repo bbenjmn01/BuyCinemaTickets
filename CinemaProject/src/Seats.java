@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,15 +13,16 @@
 public class Seats {
 
     private boolean[][] seatStatus;
-    private int count = 0;
+    public static int count = 0;
 
     public Seats(int a, int b) {
         seatStatus = new boolean[a][b];
     }
 
-    public void buy(int a, int b) {
+    public int buy(int a, int b) {
         count++;
         seatStatus[a][b] = true;
+        return count;
     }
 
     public void reset() {
