@@ -12,6 +12,7 @@ public class Seats {
 
     private boolean[][] seatStatus;
     private int count = 0;
+    private int amount = 0;
 
     public Seats(int a, int b) {
         seatStatus = new boolean[a][b];
@@ -19,10 +20,10 @@ public class Seats {
 
     public int buy(int a, int b) {
         ++count;
-        int amount = count; 
+        this.amount = count; 
         seatStatus[a][b] = true;
         this.count = 0;
-        return amount;
+        return this.amount;
     }
 
     public void resetSeats() {
