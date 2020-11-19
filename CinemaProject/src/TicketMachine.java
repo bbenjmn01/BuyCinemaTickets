@@ -14,7 +14,8 @@ public class TicketMachine {
     private int customerCoins;
     
     public TicketMachine(){
-        this.numberOfTicket=Seats.count;
+        this.numberOfTicket=Seats.amounts;
+        Seats.resetAmounts();
     }
     
     public int getNumberOfCoines(){

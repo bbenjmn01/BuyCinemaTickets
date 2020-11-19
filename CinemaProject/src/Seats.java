@@ -14,18 +14,31 @@ public class Seats {
 
     private boolean[][] seatStatus;
     public static int count = 0;
+    public static int amounts = 0;
+
+
 
     public Seats(int a, int b) {
         seatStatus = new boolean[a][b];
     }
 
     public int buy(int a, int b) {
-        count++;
+        ++count;
+        int amount;
+        amount = count; 
         seatStatus[a][b] = true;
-        return count;
+        amounts=0;
+        this.count = 0;
+        return amount;
+    }
+    
+    public static void resetAmounts(){
+        amounts=0;
     }
 
-    public void reset() {
-        this.count = 0;
+    public void resetSeats() {
+        for (int i = 0; i < seatStatus.length; i++) {
+            seatStatus[i][i] = false;
+        }
     }
 }
