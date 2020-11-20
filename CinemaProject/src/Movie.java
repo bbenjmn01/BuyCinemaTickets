@@ -27,10 +27,9 @@ public final class Movie {
         Round[this.amount]=amount+1;
         insertMovieName(name);
         insertTime(time);
-        Seats s = new Seats();
-        amount++;
-        
+        amount++; 
     }
+   
   
     public void insertMovieName(String name){
         movieName[this.amount] = name;

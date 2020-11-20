@@ -12,22 +12,24 @@
  */
 public class Seats {
 
-    private boolean[][] seatStatus;
+    private String[][] seatStatus;
     public static int count = 0;
-    public static int amounts = 0;
+    public static int amounts ;
+    public static int rows = 0;
+    public static int columns = 0;
 
     public Seats() {
-        seatStatus = new boolean[10][15];
+        seatStatus = new String[10][15];
     }
 
     public int buy(int a, int b) {
         ++count;
-        int amount;
-        amount = count; 
-        seatStatus[a][b] = true;
-        amounts=0;
+        amounts += count; 
+        seatStatus[a][b] = "booked";
         this.count = 0;
-        return amount;
+        rows=a;
+        columns=b;
+        return amounts;
     }
     
     public static void resetAmounts(){
@@ -35,8 +37,21 @@ public class Seats {
     }
 
     public void resetSeats() {
-        for (int i = 0; i < seatStatus.length; i++) {
-            seatStatus[i][i] = false;
+          for (int i = 0; i < seatStatus.length; i++) {
+            for (int j = 0; j < seatStatus[i].length; j++) {
+                seatStatus[i][j] = null;
+            }
         }
+    }
+    
+    @Override
+    public String toString() {
+         for (int i = 0; i < seatStatus.length; i++) {
+            for (int j = 0; j < seatStatus[i].length; j++) {
+                    System.out.print(i+""+j+" : "+seatStatus[i][j] + "\t");
+                }
+            System.out.println();
+            }
+        return "";
     }
 }

@@ -12,17 +12,22 @@ public class menu {
     public static void main(String[] args) {
         int select;
         int select2;
+        int row;
+        int column;
+        int select3;
+        int coi;
+        
         Movie m = new Movie(2);
+        
         m.creatMovie("conan", "12.00");
          m.creatMovie("conan", "16.00");
         
         String menuStr = "1. Select Movies \n"
         +"0. exit \n";
          Scanner scn = new Scanner(System.in);
-       
-        System.out.println(menuStr);         
-        
+ 
         do {
+            System.out.println(menuStr);  
             System.out.print("Select menu : ");
             select = scn.nextInt();
             scn.nextLine();
@@ -33,6 +38,36 @@ public class menu {
                   select2 = scn.nextInt();
                 scn.nextLine();
                 if(select2<=Movie.round&&select2>0){
+                    Seats s = new Seats();
+                    System.out.println(s);
+                     do{
+                        System.out.print("Select your seat (row) : ");
+                        row = scn.nextInt();
+                        System.out.print("Select your seat (column) : ");
+                        column = scn.nextInt();
+                        scn.nextLine();
+                        s.buy(row, column);
+                        String Sele3 = "Do you want more?\n"
+                        +"Press 0 = No \n"
+                        +"Press 1 = Yes \n"
+                        +"Press : = ";
+                        System.out.print(Sele3);
+                        select3 = scn.nextInt();
+                        }
+                        while(select3 == 1);
+                     System.out.println(s);
+                     
+                     TicketMachine t = new TicketMachine();
+                     System.out.println("TicketPrice : " + t.getTicketPrice());
+                     System.out.println("Ticket: " + t.getTicket());
+                     System.out.println(t.getPrices());
+                     System.out.println("Enter you coins: ");
+                     coi = scn.nextInt();
+                     t.setCustomerCoins(coi);
+                     t.sellTicketsToCustomer();
+
+                     System.out.println("\n"+t+"\n");
+                     Seats.resetAmounts();
                     
                 }
             }
