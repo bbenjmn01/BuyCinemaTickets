@@ -25,16 +25,18 @@ public final class BuyTickets {
 
     public int buy(int row, int col) {
         ++this.ticketAmounts;
-        if (row <= Seats.rows && col <= Seats.cols) {
+        
+        if (Seats.seatStatus[row][col] == "Booked"){
+           --this.ticketAmounts;
+        }
+        else if (row <= Seats.rows && col <= Seats.cols) {
             String a = Integer.toString(row);
             String b = Integer.toString(col);
             amounts[this.ticketAmounts-1] = "R" + a + "C" + b;
-            Seats.seatStatus[this.row][this.col] = "Booked";
+            Seats.seatStatus[row][col] = "Booked";
             return this.ticketAmounts;
         }
-//        if (Seats.seatStatus[row][col] == "Booked"){
-//            
-//        }
+       
         return 0;
     }
 
@@ -47,7 +49,9 @@ public final class BuyTickets {
         System.out.print("Number of tickets : " + this.ticketAmounts);
         System.out.print(", Seat number : ");
         for (int i = 0; i < this.ticketAmounts; i++) {
-            System.out.print(amounts[i]);
+           
+           
+                System.out.print(amounts[i]);
             if (i < this.ticketAmounts - 1) {
                 System.out.print(", ");
             }
