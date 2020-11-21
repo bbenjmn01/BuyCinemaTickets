@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author WIN10PRO
  */
-public class menu {
+public class Menu {
     public static void main(String[] args) {
         int select;
         int select2;
@@ -37,7 +37,7 @@ public class menu {
                  System.out.print("Select movie : ");
                   select2 = scn.nextInt();
                 scn.nextLine();
-                if(select2<=Movie.round&&select2>0){
+                if(select2<=Movie.movieRound&&select2>0){
                     Seats s = new Seats();
                     System.out.println(s);
                      do{

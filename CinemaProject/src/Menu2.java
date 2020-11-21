@@ -6,8 +6,8 @@
 
 /**
  *
- * @author WIN10PRO
+ * @author User
  */
-public class Time {
+public class Menu2 {
     
 }
