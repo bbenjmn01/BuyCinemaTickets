@@ -11,23 +11,25 @@ package Seats;
  */
 public final class ChangeSeatStatus {
 
-    public static int ticketAmounts;
+    public static int ticketAmounts = 0;
+    private int count = 0;
     private final String[] amounts;
 
     public ChangeSeatStatus() {
-        this.amounts = new String[Seats.rows * Seats.columns];
+        amounts = new String[Seats.rows * Seats.columns];
     }
 
     public int buy(int row, int col) {
-        ++ChangeSeatStatus.ticketAmounts;
+        ++ticketAmounts;
+        ++count;
         if ("Booked".equals(Seats.seatStatus[row][col])) {
-            --ChangeSeatStatus.ticketAmounts;
+            --ticketAmounts;
         } else if (row <= Seats.rows && col <= Seats.columns) {
-            String a = Integer.toString(row);
-            String b = Integer.toString(col);
-            amounts[ChangeSeatStatus.ticketAmounts - 1] = "R" + a + "C" + b;
+//            String a = Integer.toString(row);
+//            String b = Integer.toString(col);
+            amounts[count - 1] = "R" + Integer.toString(row) + "C" + Integer.toString(col);
             Seats.seatStatus[row][col] = "Booked";
-            return ChangeSeatStatus.ticketAmounts;
+            return ticketAmounts;
         }
         return 0;
     }
