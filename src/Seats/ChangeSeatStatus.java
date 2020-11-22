@@ -24,6 +24,7 @@ public final class ChangeSeatStatus {
         ++count;
         if ("Booked".equals(Seats.seatStatus[row][col])) {
             --ticketAmounts;
+            
         } else if (row <= Seats.rows && col <= Seats.columns) {
             amounts[count - 1] = "R" + Integer.toString(row) + "C" + Integer.toString(col);
             Seats.seatStatus[row][col] = "Booked";
@@ -34,6 +35,10 @@ public final class ChangeSeatStatus {
 
     public static void resetAmounts() {
         ChangeSeatStatus.ticketAmounts = 0;
+    }
+    
+    public static void resetSeat(int row,int col) {
+        Seats.seatStatus[row][col] = null;
     }
 
     @Override

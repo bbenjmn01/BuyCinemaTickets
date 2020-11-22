@@ -2,7 +2,7 @@ package BuyTickets;
 
 import Seats.ChangeSeatStatus;
 import Seats.Seats;
-
+import java.util.Scanner;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -52,6 +52,8 @@ public class TicketMachine {
     public int getChanges() {
         return this.change;
     }
+    
+    /** Returns change of this object.*/
 
     public void setCustomerCoins(int coins) {
         this.customerCoins = coins;
@@ -80,7 +82,11 @@ public class TicketMachine {
         if (tickets >= numberOfTicket) {
             return "The tickets are not enough.";
         } else if (tickets <= numberOfTicket && prices > customerCoins) {
-            return "Incomplete without paying another " + (prices - coins) + " Bath";
+              int sure;
+              Scanner sc = new Scanner(System.in);
+            System.out.println("\nIncomplete without paying another " + (prices - coins) + " Bath\n");
+            
+            
         } else if (tickets <= numberOfTicket && prices <= customerCoins) {
             this.numberOfCoins += Math.ceil(prices);
             this.numberOfTicket -= tickets;

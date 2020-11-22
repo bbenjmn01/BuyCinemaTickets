@@ -19,6 +19,7 @@ public final class Menu {
 
     int select;
     int choose;
+    int sure;
     int selectMore;
     int row;
     int col;
@@ -99,6 +100,7 @@ public final class Menu {
                                         System.out.println("\n" + t1 + "\n");
                                     }while(coin<t1.getPrices()); 
                                     ChangeSeatStatus.resetAmounts();
+                                    
                                     break;
 
                                 case 2:
@@ -117,6 +119,7 @@ public final class Menu {
                                                 + "Press 0 : No \n"
                                                 + "Press 1 : Yes \n"
                                                 + "Press: ";
+                                  
                                         System.out.print(sale);
                                         selectMore = sc.nextInt();
                                         System.out.println("");
@@ -136,6 +139,16 @@ public final class Menu {
                                         System.out.println("\n" + t2 + "\n");
                                     }while(coin<t2.getPrices()); 
                                     ChangeSeatStatus.resetAmounts();
+                                    System.out.println ("\nAre you sure you want to purchase this item?\n"
+                                                 + "Press 0 : No \n"
+                                                + "Press 1 : Yes \n"
+                                                + "Press: ");
+                                        sure = sc.nextInt();
+                                        switch(sure){
+                                            case 0: System.out.println("return your coins: " + t2.returnCoinsToCustomer());
+
+                                            break;
+                                        }
                                     break;
 
                                 case 3:
@@ -173,6 +186,16 @@ public final class Menu {
                                         System.out.println("\n" + t3 + "\n");
                                     }while(coin<t3.getPrices()); 
                                     ChangeSeatStatus.resetAmounts();
+                                    System.out.println ("\nAre you sure you want to purchase this item?\n"
+                                                 + "Press 0 : No \n"
+                                                + "Press 1 : Yes \n"
+                                                + "Press: ");
+                                        sure = sc.nextInt();
+                                        switch(sure){
+                                            case 0: System.out.println("return your coins: " + t3.returnCoinsToCustomer());
+
+                                            break;
+                                        }
                                     break;
 
                                 case 4:
@@ -208,8 +231,19 @@ public final class Menu {
                                         System.out.print(cs);
                                         t4.sellTicketsToCustomer();
                                         System.out.println("\n" + t4 + "\n");
+                                        
                                     }while(coin<t4.getPrices()); 
                                     ChangeSeatStatus.resetAmounts();
+                                    System.out.println ("\nAre you sure you want to purchase this item?\n"
+                                                 + "Press 0 : No \n"
+                                                + "Press 1 : Yes \n"
+                                                + "Press: ");
+                                        sure = sc.nextInt();
+                                        switch(sure){
+                                            case 0: System.out.println("return your coins: " + t4.returnCoinsToCustomer());
+
+                                            break;
+                                        }
                                     break;
 
                                 case 5:
@@ -245,11 +279,24 @@ public final class Menu {
                                         System.out.print(cs);
                                         t5.sellTicketsToCustomer();
                                         System.out.println("\n" + t5 + "\n");
+                                        
                                     }while(coin<t5.getPrices()); 
                                     ChangeSeatStatus.resetAmounts();
+                                    System.out.println ("\nAre you sure you want to purchase this item?\n"
+                                                 + "Press 0 : No \n"
+                                                + "Press 1 : Yes \n"
+                                                + "Press: ");
+                                        sure = sc.nextInt();
+                                        switch(sure){
+                                            case 0: System.out.println("return your coins: " + t5.returnCoinsToCustomer()) ;
+                                                    ChangeSeatStatus.resetSeat(row, col);
+                                            break;
+                                        }
                                     break;
 
                             }
+                            
+                            
                             break;
                         }
                     case 0:
