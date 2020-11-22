@@ -16,11 +16,11 @@ public class Admin {
 
     public Admin() {
         MovieDetails md = new MovieDetails(5);
-        md.append(new Movie("Demon Slayer: Kimetsu no Yaiba", "8:00", 11, 11));
-        md.append(new Movie("Violet Evergarden", "10:00", 12, 12));
-        md.append(new Movie("Sword Art Online", "12:00", 13, 13));
-        md.append(new Movie("Your Name", "14:00", 14, 14));
-        md.append(new Movie("Detective Conan The Movie", "16:00", 15, 15));
+        md.append(new Movie("1. Demon Slayer: Kimetsu no Yaiba", "8:00", 11, 11));
+        md.append(new Movie("2. Violet Evergarden             ", "10:00", 12, 12));
+        md.append(new Movie("3. Sword Art Online              ", "12:00", 13, 13));
+        md.append(new Movie("4. Your Name                     ", "14:00", 14, 14));
+        md.append(new Movie("5. Detective Conan The Movie     ", "16:00", 15, 15));
     }
 
 }

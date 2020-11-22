@@ -25,8 +25,6 @@ public final class ChangeSeatStatus {
         if ("Booked".equals(Seats.seatStatus[row][col])) {
             --ticketAmounts;
         } else if (row <= Seats.rows && col <= Seats.columns) {
-//            String a = Integer.toString(row);
-//            String b = Integer.toString(col);
             amounts[count - 1] = "R" + Integer.toString(row) + "C" + Integer.toString(col);
             Seats.seatStatus[row][col] = "Booked";
             return ticketAmounts;
@@ -41,7 +39,7 @@ public final class ChangeSeatStatus {
     @Override
     public String toString() {
         System.out.print("Seat number : ");
-        for (int i = 0; i < ChangeSeatStatus.ticketAmounts; i++) {
+        for (int i = 0; i < count; i++) {
             System.out.print(amounts[i]);
             if (i < ChangeSeatStatus.ticketAmounts - 1) {
                 System.out.print(", ");

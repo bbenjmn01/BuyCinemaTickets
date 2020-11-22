@@ -103,8 +103,8 @@ public class TicketMachine {
 
     @Override
     public String toString() {
-        return "Ticket Price : " + ticketPrice + " baht."
-                + "\nNumber of Tickets : " + ChangeSeatStatus.ticketAmounts
+        return "Number of Tickets : " + ChangeSeatStatus.ticketAmounts
+                + "\nTicket Price : " + ticketPrice + " baht."
                 + "\nTotal Prices : " + price + " baht."
                 + "\nThe money you put in : " + customerCoins + " baht."
                 + "\n" + sellTicketsToCustomer();

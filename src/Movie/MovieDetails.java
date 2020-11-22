@@ -14,7 +14,7 @@ import Seats.Seats;
 public class MovieDetails {
 
     public static Movie movie[];
-    private int movieNum;
+    public static int movieNum;
 
     public MovieDetails(int movieAmounts) {
         movie = new Movie[movieAmounts];
