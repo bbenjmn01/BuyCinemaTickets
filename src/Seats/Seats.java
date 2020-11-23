@@ -15,7 +15,10 @@ public class Seats {
     public static String[][] seatStatus;
     public static int rows = 0;
     public static int columns = 0;
-
+    /**Set row and column of seat.
+    *@param a the row of seat
+    *@param b the column of seat
+    */
     public Seats(int a, int b) {
         Seats.rows = a;
         Seats.columns = b;
@@ -25,7 +28,8 @@ public class Seats {
     public Seats() {
 
     }
-
+    /**Reset all seat to null.
+    */
     public void resetSeats() {
         for (int i = 0; i < seatStatus.length; i++) {
             for (int j = 0; j < seatStatus[i].length; j++) {

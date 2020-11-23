@@ -29,12 +29,14 @@ public final class Menu {
     public Menu() {
         SetMovie();
     }
-
+    /**Set the movie to the machine.
+    */
     public void SetMovie() {
         Admin am = new Admin();
         StartApp();
     }
-
+    /** Show menu interface.
+    */
     public void StartApp() {
         Scanner sc = new Scanner(System.in);
         TicketMachine tm = new TicketMachine();
