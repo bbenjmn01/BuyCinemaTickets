@@ -18,7 +18,7 @@ public final class ChangeSeatStatus {
     public ChangeSeatStatus() {
         amounts = new String[Seats.rows * Seats.columns];
     }
-
+      
     public int buy(int row, int col) {
         ++ticketAmounts;
         ++count;

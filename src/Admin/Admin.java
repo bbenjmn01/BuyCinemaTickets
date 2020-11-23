@@ -14,6 +14,11 @@ import Movie.MovieDetails;
  */
 public class Admin {
 
+    /**
+     * 
+     * Set details of movies in cinema.
+     */
+    
     public Admin() {
         MovieDetails md = new MovieDetails(5);
         md.append(new Movie("1. Demon Slayer: Kimetsu no Yaiba", "8:00", 10, 10));

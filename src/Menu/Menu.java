@@ -34,7 +34,7 @@ public final class Menu {
         Admin am = new Admin();
         StartApp();
     }
-
+ 
     public void StartApp() {
         Scanner sc = new Scanner(System.in);
         TicketMachine tm = new TicketMachine();

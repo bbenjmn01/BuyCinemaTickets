@@ -15,10 +15,23 @@ public class MovieDetails {
 
     public static Movie movie[];
     public static int movieNum;
-
+    
+    /**
+     * 
+     * @param movieAmounts Amounts of movies.
+     */
+    
+    
     public MovieDetails(int movieAmounts) {
         movie = new Movie[movieAmounts];
     }
+    
+    /**
+     * 
+     * @param mv Details of movies.
+     * @return Movies details.
+     */
+    
 
     public MovieDetails append(Movie mv) {
         if (movieNum < movie.length) {
@@ -28,9 +41,22 @@ public class MovieDetails {
         return null;
     }
     
+    /**
+     * 
+     * @param i Details of your selected movie
+     * @return Your selected movie details
+     */
+    
+    
     public Movie getMovie(int i){
         return movie[i];
     }
+    
+    /**
+     * 
+     * @return all movies details.
+     */
+    
 
     @Override
     public String toString() {

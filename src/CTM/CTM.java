@@ -12,7 +12,7 @@ import Menu.Menu;
  * @author User
  */
 public class CTM {
-
+  
     public static void main(String[] args) {
         Menu mn = new Menu();
     }
