@@ -18,7 +18,17 @@ public final class ChangeSeatStatus {
     public ChangeSeatStatus() {
         amounts = new String[Seats.rows * Seats.columns];
     }
+<<<<<<< HEAD
       
+=======
+    /** Returns Amount of Tickets
+     * 
+     * @param row the row seat in the cinema.
+     * @param col the column seat in the cinema.
+     * @return Amount of Tickets
+	 * @see #buy
+    */
+>>>>>>> 1e38e55b3e8933deb8692091bca3b41940ab89d8
     public int buy(int row, int col) {
         ++ticketAmounts;
         ++count;
@@ -31,7 +41,8 @@ public final class ChangeSeatStatus {
         }
         return 0;
     }
-
+    /** Reset the Amount of tickets to zero.
+    */
     public static void resetAmounts() {
         ChangeSeatStatus.ticketAmounts = 0;
     }
