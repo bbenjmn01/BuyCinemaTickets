@@ -75,6 +75,7 @@ public final class Menu {
                                         System.out.println("");
                                         sc.nextLine();
                                         cs.buy(row, col);
+                                        System.out.print("Seat number : ");
                                         System.out.println(cs);
                                         String sale = "\nDo you want more?\n"
                                                 + "Press 0 : No \n"

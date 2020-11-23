@@ -38,13 +38,13 @@ public final class ChangeSeatStatus {
 
     @Override
     public String toString() {
-        System.out.print("Seat number : ");
+        String seatNumber = "";
         for (int i = 0; i < count; i++) {
-            System.out.print(amounts[i]);
+            seatNumber += amounts[i];
             if (i < ChangeSeatStatus.ticketAmounts - 1) {
-                System.out.print(", ");
+                seatNumber += ", ";
             }
         }
-        return "";
+        return seatNumber;
     }
 }

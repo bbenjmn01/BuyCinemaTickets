@@ -28,9 +28,8 @@ public class Movie {
         return name + "\t" + "Time: " + time;
     }
     
-    public String seatsToString(){
-        System.out.println(setSeats);
-        return "";
+    public Seats seatsToString(){
+        return setSeats;
     } 
             
 }

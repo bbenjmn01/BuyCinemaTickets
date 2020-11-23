@@ -36,13 +36,14 @@ public class Seats {
 
     @Override
     public String toString() {
+        String seatsChart = "";
         for (int i = 0; i < seatStatus.length; i++) {
             for (int j = 0; j < seatStatus[i].length; j++) {
-                System.out.print(i + "" + j + " : " + seatStatus[i][j] + "\t");
+               seatsChart += (i + "" + j + " : " + seatStatus[i][j] + "\t");
             }
-            System.out.println();
+            seatsChart += "\n";
         }
-        return "";
+        return seatsChart;
     }
 
 }
