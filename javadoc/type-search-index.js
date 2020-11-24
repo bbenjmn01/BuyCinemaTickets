@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"Admin","l":"Admin"},{"l":"All Classes","url":"allclasses-index.html"},{"p":"Seats","l":"ChangeSeatStatus"},{"p":"CTM","l":"CTM"},{"p":"Menu","l":"Menu"},{"p":"Movie","l":"Movie"},{"p":"Movie","l":"MovieDetails"},{"p":"Seats","l":"Seats"},{"p":"BuyTickets","l":"TicketMachine"}]
